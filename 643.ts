@@ -64,3 +64,17 @@ function topSolution(nums: number[], k: number): number {
     return max;
 };
 //sliding window approach. performance should be similar O(n) and difference is negligble. sliding window is supposedly easier to read as it maintains l and r pointers
+
+
+function findMaxAverage(nums: number[], k: number, sum = 0, max = 0): number {
+  for ( let i = 0; i < k; i++ ) {
+    sum += nums[i]
+  }
+  max = sum / k
+  for ( let i = k; i < nums.length; i++ ) {
+    sum += nums[i] - nums[i - k]
+    max = Math.max(max, sum / k)
+  }
+  return max
+};
+//top solution

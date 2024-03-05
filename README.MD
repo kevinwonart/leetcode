@@ -8,12 +8,11 @@ The plan is well-structured and spread over 12 weeks, targeting different topics
 
 ## Resources
 
-- **Video Guide**: [Dave Burji's LeetCode Study Plan](https://www.youtube.com/watch?v=UKP-Vca9Q4c&t=205s) provides a comprehensive overview and tips for effectively tackling the problems week by week.
+- **Video Guide**: [Dave Burji's LeetCode Study Plan](https://www.youtube.com/watch?v=UKP-Vca9Q4c&t) provides a comprehensive overview and tips for effectively tackling the problems week by week.
 
 - **Notion Doc**: The [original study plan](https://ubiquitous-dragonfly-2fd.notion.site/12-Week-Leetcode-Preparation-Guide-e8e0b24384f54b0fb52832ef99b42c34?utm_source=techtribe.beehiiv.com&utm_medium=newsletter&utm_campaign=your-12-week-leetcode-preparation-guide) on Notion outlines the weekly topics and includes additional resources and problem sets.
 
-- **My Notion Doc**: I have also created a [personalized study guide](https://www.notion.so/12-Week-Leetcode-Preparation-Guide-ae1d34143b1d49aa981e0901d86d7f6a?pvs=4) that adapts the original plan to my progress and reflections.
-
+- **My Notion Doc**: I have also created a [personalized study guide](https://jasper-jonquil-692.notion.site/12-Week-Leetcode-Preparation-Guide-ae1d34143b1d49aa981e0901d86d7f6a?pvs=4) that adapts the original plan to my progress and reflections.
 ## Acknowledgements
 
 Special thanks to Dave Burji for creating and sharing this valuable study plan.
