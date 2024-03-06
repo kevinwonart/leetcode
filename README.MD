@@ -52,11 +52,9 @@ Check your Node version using:
     node -v
     ```
 
-6. If needed, download the latest version of Node.js from https://nodejs.org/
+6. To run your JavaScript file with Node.js, use:
 
-To run your JavaScript file with Node.js, use:
-
-    ```
+    ```bash
     node --watch <./dist/pathToJsFile>
     ```
 
