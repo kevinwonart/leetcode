@@ -22,45 +22,46 @@ The plan is well-structured and spread over 12 weeks, targeting different topics
 
    ```bash
    npm install -g typescript
+   ```
    or
+   ```bash
    npm install -D typescript
    ```
 
-# Initialize a new TypeScript configuration file (tsconfig.json)
+2. **Initialize a new TypeScript configuration file (tsconfig.json)
   ```bash
   tsc --init
   ```
-# Now, open tsconfig.json and update the following settings for rootDir and outDir
-# You can manually edit the tsconfig.json file to include these lines:
+3. Now, open tsconfig.json and update the following settings for rootDir and outDir. You can manually edit the tsconfig.json file to include these lines:
 
   ```bash
    "rootDir": "./src",
    "outDir": "./dist",
   ```
 
-# To continuously watch and compile your TypeScript files, use:
+To continuously watch and compile your TypeScript files, use:
 
   ```bash
   tsc --watch
   ```
 
-# Ensure you have Node.js version 18.11 or higher for node --watch
-# Check your Node version using:
+Ensure you have Node.js version 18.11 or higher for node --watch
+Check your Node version using:
 
   ```bash
   node -v
   ```
 
-# If needed, download the latest version of Node.js from https://nodejs.org/
+If needed, download the latest version of Node.js from https://nodejs.org/
 
-# To run your JavaScript file with Node.js, use:
-#
+To run your JavaScript file with Node.js, use:
+
   ```
   node --watch <./dist/pathToJsFile>
   ```
 
 ## Testing
-#results can be watched and checked while working in the environment in real-time with typescript watch and node js watch
+results can be watched and checked while working in the environment in real-time with typescript watch and node js watch
   ```typescript
   console.assert(solutionFunction(..args) === expectedResult, `expects <RESULT> | Returned $`{solutinFunction(...args)}`;
   ```
