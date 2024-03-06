@@ -20,45 +20,45 @@ The plan is well-structured and spread over 12 weeks, targeting different topics
 
 1. **Install TypeScript**: To get started with TypeScript, you need to install it globally or in app. You can do this using npm (Node Package Manager) with the following command:
 
-   ```bash
-   npm install -g typescript
-   ```
-   or
-   ```bash
-   npm install -D typescript
-   ```
+    ```bash
+    npm install -g typescript
+    ```
+    or
+    ```bash
+    npm install -D typescript
+    ```
 
-2. **Initialize a new TypeScript configuration file (tsconfig.json)
-  ```bash
-  tsc --init
-  ```
+2. Initialize a new TypeScript configuration file (tsconfig.json)
+    ```bash
+    tsc --init
+    ```
 3. Now, open tsconfig.json and update the following settings for rootDir and outDir. You can manually edit the tsconfig.json file to include these lines:
 
-  ```bash
-   "rootDir": "./src",
-   "outDir": "./dist",
-  ```
+    ```bash
+     "rootDir": "./src",
+     "outDir": "./dist",
+    ```
 
-To continuously watch and compile your TypeScript files, use:
+4. To continuously watch and compile your TypeScript files, use:
 
-  ```bash
-  tsc --watch
-  ```
+    ```bash
+    tsc --watch
+    ```
 
-Ensure you have Node.js version 18.11 or higher for node --watch
+5. Ensure you have Node.js version 18.11 or higher for node --watch
 Check your Node version using:
 
-  ```bash
-  node -v
-  ```
+    ```bash
+    node -v
+    ```
 
-If needed, download the latest version of Node.js from https://nodejs.org/
+6. If needed, download the latest version of Node.js from https://nodejs.org/
 
 To run your JavaScript file with Node.js, use:
 
-  ```
-  node --watch <./dist/pathToJsFile>
-  ```
+    ```
+    node --watch <./dist/pathToJsFile>
+    ```
 
 ## Testing
 results can be watched and checked while working in the environment in real-time with typescript watch and node js watch
