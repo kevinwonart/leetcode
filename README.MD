@@ -55,7 +55,7 @@ Check your Node version using:
 6. To run your JavaScript file with Node.js, use:
 
     ```bash
-    node --watch <./dist/pathToJsFile>
+    node --watch <./dist/file.js>
     ```
 
 ## Testing

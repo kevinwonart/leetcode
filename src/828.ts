@@ -59,14 +59,13 @@ function uniqueLetterString(s: string): number {
 */
 //My notes
 /*
-This approach by denshell uses two arrays of the size of possible characters of a string 26(for 26 characters of the alphabet)
-one is filled with -1 and the other 0. The outer loop checks each run count is size of the string then gets the charIndex(-65
-this time instead of 97 since the problem stipulates all UPPERCASE. the outer array is used to count if the character is unique to the
-substring and adds index minus -1 so adding one. the second loop inner loop gets a count of all the count in the seccond array that tracks
-unique characters. before the next call of the outer loop(or at the end of the outer loop) the unique-character-array is given the value of
-the index of the outer loop. this way when a repeat character in the substring it will count against istelf at the counting/total array.
-
 This approach uses two arrays. One for counting the total and the other for getting the last index of the substring. the lastIndex array
 will add to the index if the character is unique. if the character is not unqiue it will not add to the contributionArray because it 
-will be marked as not unique when it subtracts itself during the contributinsPallette array.
-
+will be marked as not unique when it subtracts itself during the contributinsPallette array. Making each element in lastIndex -1 makes 
+it so that when a corresponding letter/index of the character of the string that is being tested. The outer loop gets the charIndex
+then it plugs a number into the a contribution, or count, array. it gets i(index of the loop) minus the value at the charIndex of lastIndex.
+this adds one and marks the value 1 at the first index. the second/inside loop through each element in the array
+and adds the total. This counts every uniqueChar count of each possible substring from that index of with total += countAArray[j]
+then the lastIndex at the characterIndex is set to the value of the index of the outer loop so that when a character repeats later in the
+string it will set the counting array to 0 with i - the index of where it was last repeated before.
+**/
