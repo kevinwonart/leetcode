@@ -86,7 +86,7 @@ console.assert(arraysAreEqualIgnoreOrder(findAnagrams(s1,p1), [0,6]), `Expects [
 console.assert(arraysAreEqualIgnoreOrder(findAnagrams(s2,p2), [0,1,2]), `Expects [0,1,2]  | Got ${JSON.stringify(findAnagrams(s2,p2))}`);
 
 //Top voted solution via JinZihang
-function findAnagrams(s: string, p: string): number[] {
+function topfindAnagrams(s: string, p: string): number[] {
     if (s.length < p.length) return [];
     
     // Initialise maps
