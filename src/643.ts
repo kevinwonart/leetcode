@@ -90,3 +90,5 @@ console.assert(findMaxAverage(nums1, k1) === 12.75, "expect 12.75");
 let nums2 = [5];
 let k2 = 1;
 console.assert(findMaxAverage(nums2, k2) === 5.00000, "expect 5.00000");
+
+export {};

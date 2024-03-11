@@ -69,3 +69,4 @@ and adds the total. This counts every uniqueChar count of each possible substrin
 then the lastIndex at the characterIndex is set to the value of the index of the outer loop so that when a character repeats later in the
 string it will set the counting array to 0 with i - the index of where it was last repeated before.
 **/
+export {};

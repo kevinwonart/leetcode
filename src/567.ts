@@ -166,3 +166,5 @@ its number of occurence. then checks for there being a permutation. This problem
 this only checks if one permutation exists. the problem before finds all index of a permutation
  *
 */
+
+export {};

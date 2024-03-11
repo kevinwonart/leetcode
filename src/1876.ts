@@ -56,3 +56,5 @@ const str1 = "xyzzaz";
 const str2 = "aababcabc"
 console.assert(countGoodSubstrings(str1) === 1, `expects 1 | Got ${countGoodSubstrings(str1)}`);
 console.assert(countGoodSubstrings(str2) === 4, `expects 4 | Got ${countGoodSubstrings(str2)}`);
+
+export {};

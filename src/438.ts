@@ -132,3 +132,5 @@ function topfindAnagrams(s: string, p: string): number[] {
 //the next one to the map at the end of the loop.
 //i didnt know to use a map instead i used some javascript builtin callbacks that come with strings
 //to check for equality. my solution didn't pass the runtime limit for leetcodes' submission
+
+export {};
