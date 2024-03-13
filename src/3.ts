@@ -55,3 +55,4 @@ const str3 = "pwwkew";
 console.assert(lengthOfLongestSubstring(str1) === 3, `Expects 3 | output: ${lengthOfLongestSubstring(str1)} | String input \"${str1}\"`);
 console.assert(lengthOfLongestSubstring(str2) === 1, `Expects 1 | output: ${lengthOfLongestSubstring(str2)} | String input \"${str2}\"`);
 console.assert(lengthOfLongestSubstring(str1) === 3, `Expects 3 | output: ${lengthOfLongestSubstring(str3)} | String input \"${str3}\"`);
+export {};
