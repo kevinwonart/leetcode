@@ -57,7 +57,6 @@ function maxSlidingWindow(nums: number[], k: number): number[] {
       }
       if(nums[i] < largest2){
         largest = largest2;
-
       }
     }
     if(nums[left] === largest2){
