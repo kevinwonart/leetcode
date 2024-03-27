@@ -5,14 +5,14 @@ function twoSum(nums: number[], target: number): number[] {
   for (let i = 0; i < nums.length; i++) {
     const number = nums[i];
     const difference = target - number;
-    if(numberMap.has(difference) {
-      return [numberMap.get(difference), i]
+    if(numberMap.has(difference)) {
+      return [numberMap.get(difference), i];
     }
     numberMap.set(number, i);
   }
+  return [];
 }
 
-console.log("hello");
 const nums1 = [2,7,11,15];
 const target1 = 9;
 const nums2 = [3,2,4];
