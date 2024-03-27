@@ -50,7 +50,6 @@ function threeSumClosest(nums: number[], target: number): number {
       } else {
         right--;
       }
-      console.log(i, left, right, sum, distance);
       if(distance < diff) {
         answer = sum;
         diff = distance;
@@ -61,7 +60,6 @@ function threeSumClosest(nums: number[], target: number): number {
   return answer;
 };
 
-console.log("hello");
 const nums1 = [-1, 2, 1, -4];
 const target1 = 1;
 const output1 = 2;
@@ -70,8 +68,7 @@ const target2 = 1;
 const output2 = 0;
 
 console.assert(threeSumClosest(nums1,target1) === output1, `Expected ${output1} | Received ${threeSumClosest(nums1, target1)} | nums1 ${nums1} | output1 ${output1}`);
-//console.assert(threeSumClosest(nums2,target2) === output2, `Expected ${output2} | Received ${threeSumClosest(nums2, target2)} | nums2 ${nums2} | output2 ${output2}`);
-console.log("hello");
+console.assert(threeSumClosest(nums2,target2) === output2, `Expected ${output2} | Received ${threeSumClosest(nums2, target2)} | nums2 ${nums2} | output2 ${output2}`);
 
 export {};
 
