@@ -42,7 +42,7 @@ function combinationSum2(candidates: number[], target: number): number[][] {
       res.push([...stack]);
       return;
     }
-    for(let i = depth; i < candidates.length - 1; i++) {
+    for (let i = depth; i < candidates.length - 1; i++) {
       if (i > depth && candidates[i] === candidates[i - 1]) continue;
       let diff = target - candidates[i];
       if (diff < 0) break;
@@ -57,10 +57,10 @@ function combinationSum2(candidates: number[], target: number): number[][] {
 
 const candidates1 = [10, 1, 2, 7, 6, 1, 5];
 const target1 = 8;
-const res1 = [[1,1,6],[1,2,5],[1,7],[2,6]]
+const res1 = [[1, 1, 6], [1, 2, 5], [1, 7], [2, 6]]
 combinationSum2(candidates1, target1);
-console.assert(arrays2DAreEqualPermutation(combinationSum2(candidates1,target1),res1),`received ${combinationSum2(candidates1,target1)}, expected ${res1} | candidate: ${candidates1} | target: ${target1}`);
-export {};
+console.assert(arrays2DAreEqualPermutation(combinationSum2(candidates1, target1), res1), `received ${combinationSum2(candidates1, target1)}, expected ${res1} | candidate: ${candidates1} | target: ${target1}`);
+export { };
 //explanation: this is a solution from Mohamed_Elfar on leetcode website, the way the alogorithm
 //works is the problem checks if an open bracket is greater the amount of closing parenthesis count. it pushes
 //")" to the current string if it is in the next recusrive call. It then checks if the open parenthesis count is greater than

@@ -28,8 +28,8 @@ s contains only lowercase English letters.
 
 function isPalindrome(s: string): boolean {
   if (s.length === 0) return false
-  for(let i = 0; i < Math.floor(s.length/2); i++){
-    if(s[i] !== s[s.length - i - 1]) return false
+  for (let i = 0; i < Math.floor(s.length / 2); i++) {
+    if (s[i] !== s[s.length - i - 1]) return false
   }
   return true
 }
@@ -44,7 +44,7 @@ function partition(s: string): string[][] {
     }
 
     for (let i = start; i < s.length; i++) {
-      if (isPalindrome(s.slice(start, i +1))) {
+      if (isPalindrome(s.slice(start, i + 1))) {
         stack.push(s.slice(start, i + 1))
         recurse(i + 1)
         stack.pop()
@@ -56,5 +56,6 @@ function partition(s: string): string[][] {
 }
 
 const input1 = "aab"
-const res1 = [["a","a","b"],["aa","b"]]
-console.assert(arrays2DAreEqualPermutation(partition(input1),res1), `expect ${res1}, returned: ${partition(input1)} | input: ${input1}`);
+const res1 = [["a", "a", "b"], ["aa", "b"]]
+console.assert(arrays2DAreEqualPermutation(partition(input1), res1), `expect ${res1}, returned: ${partition(input1)} | input: ${input1}`);
+export { }

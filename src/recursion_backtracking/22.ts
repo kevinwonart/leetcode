@@ -38,12 +38,12 @@ function generateParenthesis(n: number): string[] {
 
 const n1 = 3;
 const n2 = 1;
-const res1 = ["((()))","(()())","(())()","()(())","()()()"];
+const res1 = ["((()))", "(()())", "(())()", "()(())", "()()()"];
 const res2 = ["()"];
 console.log(generateParenthesis(n1));
-console.assert(arraysAreEqualPermutation(generateParenthesis(n1),res1), `expected ${res1} | returned: ${generateParenthesis(n1)} | n1 = ${n1}`);
+console.assert(arraysAreEqualPermutation(generateParenthesis(n1), res1), `expected ${res1} | returned: ${generateParenthesis(n1)} | n1 = ${n1}`);
 console.assert(arraysAreEqualPermutation(generateParenthesis(n2), res2), `expected ${res2} | returned: ${generateParenthesis(n2)} | n2 = ${n2}`);
-export {};
+export { };
 //explanation: this is a solution from Mohamed_Elfar on leetcode website, the way the alogorithm
 //works is the problem checks if an open bracket is greater the amount of closing parenthesis count. it pushes
 //")" to the current string if it is in the next recusrive call. It then checks if the open parenthesis count is greater than
