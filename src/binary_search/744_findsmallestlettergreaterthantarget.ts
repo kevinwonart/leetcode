@@ -34,3 +34,37 @@ letters contains at least two different characters.
 target is a lowercase English letter.
 
 */
+/* solution by NexRX
+function nextGreatestLetter(letters: string[], target: string): string {
+    const n = letters.length
+    // Handle edge case: target is greater than all letters
+    if (target >= letters[n-1] ) return letters[0];
+
+    const goal = target.charCodeAt(0) + 1
+
+    let l = 0, r = n - 1, m: number;
+    while (l <= r) {
+        m = Math.floor((l + r) / 2);
+        const code = letters[m].charCodeAt(0);
+        if (code === goal) return letters[m]
+        else if (code > goal) r = m - 1
+        else l = m + 1
+    }
+
+    // Otherwise, return the letter found immediately greater than the target
+    return letters[l];
+};
+*/
+/*
+ * Summary
+ * Basic binary serach implementation:
+ * define left and right, use a while loop to go through
+ * left = 0
+ * right = nums.length - 1
+ * exit using l<=r
+ * start with mid index (l+r)/2
+ * check if target is mid, return that value if its is so.
+ * check if target is lower or higher than mid index value. 
+ * if its greater set low to mid + 1
+ * if it's lesser set mid to high - 1. 
+ */
