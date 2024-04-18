@@ -35,6 +35,7 @@ Constraints:
  *     ...
  * };
  */
+/*
 var solution = function(isBadVersion: any) {
 
   return function(n: number): number {
@@ -54,11 +55,14 @@ var solution = function(isBadVersion: any) {
     }
   }
 }
+*/
 /* Summary:
  * This is a basic binary search solution but the conditional is to check one position before
  * the badVersion encounter so that if that the prior version is good it indicates that that 
  * is the first bad version.
  *
  * no test because the isBadVersion is defined inside the leetcode code sandbox API
+ *
+ * the solution is commented because the return inside "return function" causes an error
+ * from not handling the external API
  */
-
