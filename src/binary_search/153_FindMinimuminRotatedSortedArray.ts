@@ -38,13 +38,26 @@ n == nums.length
 All the integers of nums are unique.
 nums is sorted and rotated between 1 and n times.
  */
+function findMin(nums: number[]): number {
+  let min = 5001
 
-function findMin(Nums: number[]): number {
-  return 1;
+  let l = 0, r = nums.length - 1
+  while (l <= r) {
+    const m = Math.floor((l + r) / 2)
+    console.log(`l: ${l} | r: ${r} | m: ${m} | midval: ${nums[m]}`)
+    min = Math.min(min, nums[m])
+
+    if (nums[m] > nums[r])
+      l = m + 1
+    else r = m - 1
+  }
+
+  return min
 }
 /* Summary:
  *
  *
  */
 
-
+const nums1 = [13, 12, 11, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+console.log(findMin(nums1))

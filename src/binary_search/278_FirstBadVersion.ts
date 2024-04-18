@@ -35,7 +35,6 @@ Constraints:
  *     ...
  * };
  */
-
 var solution = function(isBadVersion: any) {
 
   return function(n: number): number {
