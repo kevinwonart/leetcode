@@ -1,4 +1,3 @@
-
 //https://leetcode.com/problems/merge-intervals/description/
 
 /* 56. Merge Intervals
@@ -25,8 +24,30 @@
   0 <= starti <= endi <= 104
  */
 
+/* solution by SumitPokhyiryal
+function merge(intervals: number[][]): number[][] {
+    intervals.sort((a , b) => a[0] - b[0] )
+    let res = [] , n = intervals.length , i = 0;
+    while( i < n ){
+        let tmp = [intervals[i][0]] , max = intervals[i][1];
+        i++;
+        while(i < n && max >= intervals[i][0] ){
+            max = Math.max( intervals[i][1] , max )
+            i++;
+        }
+        tmp.push(max);
+        res.push(tmp);
+    }
+    return res;
+};
+
+*/
 /* Summary:
- *
- *
+ * this solution does not use a stack.
+ * it uses a nested loop, check first intervals and second intervals and uses conditionals 
+ * to merge. push max to tmp. push tmp to res.
+ * return res
+ * can use a stack in place of a nested loop and keep the logic similar test if the indices
+ * can be merged
  */
 
