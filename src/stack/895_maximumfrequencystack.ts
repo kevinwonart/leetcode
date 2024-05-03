@@ -33,8 +33,57 @@
   freqStack.pop();   // return 4, as 4, 5 and 7 is the most frequent, but 4 is closest to the top. The stack becomes [5,7].
  */
 
+class FreqStack {
+  freq: Record<number, number>;
+  stacks: number[][];
+
+  constructor() {
+    this.freq = {};
+    this.stacks = [[]];
+  }
+
+  push(x: number): void {
+    this.freq[x] ||= 0;
+    this.freq[x]++;
+
+    const f = this.freq[x];
+    this.stacks[f] ||= [];
+    this.stacks[f].push(x);
+    console.log(this)
+  }
+
+  pop(): number {
+    console.log("works")
+    const x = this.stacks.at(-1).pop();
+
+    this.freq[x]--;
+
+    //this conditional cleansup the matrix in case there is a [] array at the end
+    if (this.stacks.at(-1).length === 0) {
+      this.stacks.pop();
+    }
+
+    console.log(this)
+    return x;
+  }
+}
+console.log(obj.kevin)
+let testStack = new FreqStack();
+testStack.push(5) // FreqStack { freq: { '5': 1 }, stacks: [ [], [ 5 ] ]
+testStack.push(7) // FreqStack { freq: { '5': 1, '7': 1 }, stacks: [ [], [ 5, 7 ] ] }
+testStack.push(5) // FreqStack { freq: { '5': 2, '7': 1 }, stacks: [ [], [ 5, 7 ], [ 5 ] ] }
+testStack.push(7) // FreqStack { freq: { '5': 2, '7': 2 }, stacks: [ [], [ 5, 7 ], [ 5, 7 ] ]
+testStack.push(4) // FreqStack { freq: { '4': 1, '5': 2, '7': 2 }, stacks: [ [], [ 5, 7, 4 ], [ 5, 7 ] ] }
+testStack.push(5) // FreqStack { freq: { '4': 1, '5': 3, '7': 2 }, stacks: [ [], [ 5, 7, 4 ], [ 5, 7 ], [ 5 ] ] }
+testStack.pop() // FreqStack { freq: { '4': 1, '5': 2, '7': 2 }, stacks: [ [], [ 5, 7, 4 ], [ 5, 7 ] ] }
+testStack.pop() // FreqStack { freq: { '4': 1, '5': 2, '7': 1 }, stacks: [[], [5, 7, 4], [5]] }
+testStack.pop() // FreqStack { freq: { '4': 1, '5': 1, '7': 1 }, stacks: [ [], [ 5, 7, 4 ] ] }
+testStack.pop() // FreqStack { freq: { '4': 0, '5': 1, '7': 1 }, stacks: [ [], [ 5, 7 ] ] }
+
 /* Summary:
- *
- *
+ * 1. use a frequency map
+ * 2. use a 2d array - stack
+ * 3. push based on the frequency map value. so if a number occurs twice push that number at index 2
+ * 4. problem is kept clean so just pop at the end
  */
 
