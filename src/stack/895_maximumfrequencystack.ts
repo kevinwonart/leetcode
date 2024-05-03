@@ -54,20 +54,19 @@ class FreqStack {
 
   pop(): number {
     console.log("works")
-    const x = this.stacks.at(-1).pop();
+    const x = this.stacks.at(-1)!.pop();
 
-    this.freq[x]--;
+    this.freq[x!]--;
 
     //this conditional cleansup the matrix in case there is a [] array at the end
-    if (this.stacks.at(-1).length === 0) {
+    if (this.stacks.at(-1)!.length === 0) {
       this.stacks.pop();
     }
 
     console.log(this)
-    return x;
+    return x!;
   }
 }
-console.log(obj.kevin)
 let testStack = new FreqStack();
 testStack.push(5) // FreqStack { freq: { '5': 1 }, stacks: [ [], [ 5 ] ]
 testStack.push(7) // FreqStack { freq: { '5': 1, '7': 1 }, stacks: [ [], [ 5, 7 ] ] }
