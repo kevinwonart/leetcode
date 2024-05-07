@@ -1,3 +1,4 @@
+import { arraysAreEqual } from "../util"
 //https://leetcode.com/problems/daily-temperatures/description/
 
 /* 739. Daily Temperatures
@@ -30,8 +31,8 @@ function dailyTemperatures(temperatures: number[]): number[] {
   for (let i = 1; i < temperatures.length; i++) {
     while (stack.length > 0 && temperatures[stack[stack.length - 1]] < temperatures[i]) {
       let day = stack.pop()
-      let lenBetweenWarmDays = i - day
-      res[day] = lenBetweenWarmDays
+      let lenBetweenWarmDays = i - day!
+      res[day!] = lenBetweenWarmDays
     }
     stack.push(i)
   }
@@ -40,7 +41,7 @@ function dailyTemperatures(temperatures: number[]): number[] {
 const input1 = [73, 74, 75, 71, 69, 72, 76, 73]
 const output1 = [1, 1, 4, 2, 1, 1, 0, 0]
 //console.log(dailyTemperatures(input1))
-console.assert(dailyTemperatures(input1) === output1, `Expected ${output1} | received ${dailyTemperatures(input1)} instead`)
+console.assert(arraysAreEqual(dailyTemperatures(input1), output1), `Expected ${output1} | received ${dailyTemperatures(input1)} instead`)
 /* Summary:
  *
  *
