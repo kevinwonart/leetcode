@@ -66,3 +66,5 @@ var solution = function(isBadVersion: any) {
  * the solution is commented because the return inside "return function" causes an error
  * from not handling the external API
  */
+
+export { }

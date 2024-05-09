@@ -86,3 +86,5 @@ function findPeakElement(nums: number[]): number {
 * this solution is the correct answer, but in case I wanted to get the highest peak
 * i would have to use the linear approach
 */
+
+export { }

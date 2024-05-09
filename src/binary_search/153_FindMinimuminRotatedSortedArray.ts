@@ -61,3 +61,5 @@ function findMin(nums: number[]): number {
 
 const nums1 = [13, 12, 11, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 console.log(findMin(nums1))
+
+export { }

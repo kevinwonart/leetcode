@@ -33,3 +33,5 @@ Constraints:
 0 <= arr[i] <= 106
 arr is guaranteed to be a mountain array.
 */
+
+export { }

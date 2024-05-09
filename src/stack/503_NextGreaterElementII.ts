@@ -50,3 +50,5 @@ console.assert(JSON.stringify(nextGreaterElements(input2)) === JSON.stringify(ou
  *
  *
  */
+
+export { }

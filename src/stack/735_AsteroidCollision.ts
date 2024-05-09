@@ -67,3 +67,5 @@ console.assert(arraysAreEqual(asteroidCollision(input3), output3), `expected: ${
  *
  *
  */
+
+export { }

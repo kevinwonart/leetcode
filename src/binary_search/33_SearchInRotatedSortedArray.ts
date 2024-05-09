@@ -117,3 +117,5 @@ function search(nums: number[], target: number): number {
  *       -else high = mid - 1
  * return -1 if the while goes to the end without a single return
 */
+
+export { }

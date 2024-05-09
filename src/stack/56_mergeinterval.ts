@@ -51,3 +51,5 @@ function merge(intervals: number[][]): number[][] {
  * can be merged
  */
 
+
+export { }

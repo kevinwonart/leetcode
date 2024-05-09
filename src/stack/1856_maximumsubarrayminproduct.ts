@@ -132,3 +132,5 @@ console.log(maxSumMinProduct([3, 1, 5, 6, 4, 2])); // Output: 60
  * 4. get module answer because the result is is very large
  */
 
+
+export { }
