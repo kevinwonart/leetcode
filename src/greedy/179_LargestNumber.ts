@@ -23,8 +23,21 @@
   0 <= nums[i] <= 109
  */
 
+/* solution by Dalinte https://leetcode.com/problems/largest-number/solutions/4711294/short-solution-custom-sort-typescript/
+function largestNumber(nums: number[]): string {
+  nums.sort((a, b) => `${a}${b}` < `${b}${a}` ? 1 : -1)
+
+  if (nums[0] === 0) {
+    return '0'
+  }
+
+  return nums.join('')
+};
+*/
+
 /* Summary:
- *
- *
+ * 1. sort
+ * 2. return 0 for 0 edge case
+ * 3. return nums.join
  */
 export { }
