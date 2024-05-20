@@ -19,8 +19,10 @@
   1 <= heights.length <= 105
   0 <= heights[i] <= 104*
  */
+/*
 function largestRectangleArea(heights: number[]): number {
 }
+/*
 
 /* Summary:
  *
