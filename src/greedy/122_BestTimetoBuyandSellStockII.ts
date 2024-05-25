@@ -33,6 +33,23 @@
   0 <= prices[i] <= 104
  */
 
+function maxProfit(prices: number[]): number {
+  let profit = 0
+  for (let i = 1; i < prices.length; i++) {
+    if (prices[i] > prices[i - 1]) {
+      profit += prices[i] - prices[i - 1]
+    }
+  }
+  return profit
+}
+const input1 = [7, 1, 5, 3, 6, 4]
+const output1 = 7
+const input2 = [1, 2, 3, 4, 5]
+const output2 = 4
+
+console.assert(maxProfit(input1) === output1, `expected ${output1} | recieved ${maxProfit(input1)} | input ${input1}`)
+console.assert(maxProfit(input2) === output2, `expected ${output2} | recieved ${maxProfit(input2)} | input ${input2}`)
+
 /* Summary:
  *
  *
